@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aravind S | Software Engineer & Data Analyst</title>
+<meta name="description" content="Aravind S, B.E. Computer Science graduate and aspiring Software Engineer / Data Analyst skilled in Python, SQL, Power BI and React.js.">
+<meta property="og:title" content="Aravind S | Software Engineer & Data Analyst">
+<meta property="og:description" content="Building intelligent applications and transforming data into meaningful insights.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+<!--
+HOW TO CUSTOMIZE
+ Colors (CSS variables in :root): --bg #FBF8F7, --text #140A0C, --muted #6B5A5E,
+ --maroon #7A0F24, --maroon-dark #4E0A16, --maroon-light #A31D3A, --rose #E58CA0, --blush #F6C9D1, --border.
+ Photo: put MY_PHOTO.png next to this file. A transparent-background PNG will look best;
+   with a light-gray studio background, the multiply blend + edge mask hides it.
+ Resume: put resume.pdf next to this file. GitHub: replace the GITHUB_URL placeholder in the footer.
+ Screenshots: search for "SWAP:" comments and replace the placeholder <div class="ph"> with <img src="your.png" alt="...">.
+-->
+<style>
+:root{--bg:#FBF8F7;--text:#140A0C;--muted:#6B5A5E;--maroon:#7A0F24;--maroon-dark:#4E0A16;--maroon-light:#A31D3A;--rose:#E58CA0;--blush:#F6C9D1;--border:rgba(122,15,36,.12);--glass:rgba(255,255,255,.55);--shadow:0 10px 40px rgba(122,15,36,.08);--serif:'Times New Roman',Times,serif;--sans:'Times New Roman',Times,serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--maroon-light);outline-offset:3px}
+.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;position:relative}
+.label{font-family:var(--serif);font-style:italic;color:var(--maroon);font-size:1.25rem;text-align:center}
+h2{font-size:clamp(1.9rem,4vw,3rem);text-align:center;line-height:1.15;margin:6px 0 48px;letter-spacing:-.02em}
+.glow{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;background:radial-gradient(circle,var(--maroon) 0%,var(--rose) 40%,var(--blush) 65%,transparent 75%);opacity:.55}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--border);background:#fff;color:var(--maroon);cursor:pointer;font-family:inherit;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.p{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.btn.p:hover{background:var(--maroon-dark)}
+.btn.w{background:#fff;color:var(--maroon-dark)}
+.btn svg{width:16px;height:16px}
+.glass{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow)}
+.pill{display:inline-block;padding:4px 12px;border-radius:999px;border:1px solid var(--maroon);color:var(--maroon);font-size:.78rem;font-weight:600;background:rgba(255,255,255,.7)}
+/* top bar */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+.mark{font-family:var(--serif);font-style:italic;font-size:1.8rem;text-decoration:none;color:var(--text)}
+.menu-btn{width:48px;height:48px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.8);backdrop-filter:blur(10px);cursor:pointer;display:grid;place-items:center;color:var(--maroon)}
+.menu-btn span,.menu-btn span::before{display:block;width:18px;height:2px;background:currentColor;position:relative;transition:.3s}
+.menu-btn span::before{content:"";position:absolute;top:6px}
+.menu-btn[aria-expanded=true] span{transform:translateY(3px) rotate(45deg)}
+.menu-btn[aria-expanded=true] span::before{top:0;transform:rotate(-90deg)}
+nav#menu{position:fixed;inset:0;z-index:40;background:rgba(251,248,247,.97);display:grid;place-content:center;gap:6px;text-align:center;opacity:0;visibility:hidden;transition:.35s}
+nav#menu.open{opacity:1;visibility:visible}
+nav#menu a{font-family:var(--serif);font-style:italic;font-size:clamp(2rem,6vw,3.2rem);text-decoration:none;color:var(--text)}
+nav#menu a:hover{color:var(--maroon)}
+/* hero */
+#hero{min-height:100vh;padding:120px 0 60px;overflow:hidden;text-align:center}
+#hero .glow{width:min(780px,110vw);height:min(780px,110vw);left:50%;top:30%;transform:translateX(-50%)}
+.hero-in{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:#fff;border:1px solid var(--border);font-size:.85rem;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--maroon);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(122,15,36,.5)}100%{box-shadow:0 0 0 12px transparent}}
+h1{font-size:clamp(2.6rem,8vw,6rem);line-height:1;letter-spacing:-.03em;margin:22px 0 0;position:relative;z-index:3}
+h1 .it{display:block;font-size:1.12em;color:var(--maroon);letter-spacing:-.01em;margin-top:4px}
+h1 .it small{font-size:.5em;color:var(--text);display:block;line-height:1.2}
+.portrait{position:relative;z-index:1;width:min(380px,78vw);margin:-40px auto 0;aspect-ratio:3/4}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(1);mix-blend-mode:multiply;-webkit-mask-image:radial-gradient(ellipse 70% 72% at 50% 45%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 70% 72% at 50% 45%,#000 55%,transparent 100%)}
+.hero-row{display:flex;flex-direction:column;gap:20px;align-items:center;margin-top:-20px;position:relative;z-index:3}
+.hero-row p{max-width:420px;color:var(--muted)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.note{font-size:.85rem;color:var(--muted)}
+@media(min-width:900px){.hero-row{flex-direction:row;justify-content:space-between;align-items:flex-end;text-align:left;margin-top:-90px}.hero-row>*{flex:1}.hero-row .btns{flex-direction:column;align-items:flex-end}.hero-row .note{align-self:flex-end}}
+/* marquee */
+.marq{padding:28px 0;overflow:hidden;border-block:1px solid var(--border);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:48px;width:max-content;animation:scroll 32s linear infinite}
+.track span{font-weight:700;font-size:1.3rem;color:var(--maroon);opacity:.8;white-space:nowrap}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* featured */
+.feat{position:relative;border-radius:36px;background:linear-gradient(135deg,var(--maroon-dark),var(--maroon),var(--maroon-light));color:#fff;padding:clamp(28px,5vw,64px);overflow:hidden}
+.feat .glow{width:420px;height:420px;right:-100px;top:-100px;opacity:.45}
+.feat-g{position:relative;z-index:1;display:grid;gap:36px;grid-template-columns:1fr}
+@media(min-width:900px){.feat-g{grid-template-columns:1fr 1.1fr;align-items:center}}
+.feat h3{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:14px}
+.feat p{opacity:.9;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.feat .tags span{padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);font-size:.8rem}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fr{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(10px);border-radius:20px;padding:8px;transition:.3s}
+.fr:hover{transform:translateY(-4px) rotate(0)}
+.fr:first-child{grid-column:1/-1;transform:rotate(-1.5deg)}.fr:nth-child(2){transform:rotate(2deg)}.fr:nth-child(3){transform:rotate(-2deg)}
+.ph{aspect-ratio:16/9;border-radius:14px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.1) 0 10px,rgba(255,255,255,.04) 10px 20px);display:grid;place-items:center;text-align:center;font-size:.8rem;padding:8px;width:100%;object-fit:cover}
+.sticker{position:absolute;z-index:2;top:22px;right:22px;background:#fff;color:var(--maroon);font-weight:700;font-size:.8rem;padding:10px 16px;border-radius:999px;transform:rotate(8deg);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:rotate(8deg) translateY(-8px)}}
+/* about */
+.about{position:relative;max-width:760px;margin:0 auto;padding:48px 32px;text-align:center}
+.about p{font-size:1.15rem;color:var(--muted);position:relative;z-index:1}
+.chip{position:absolute;padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:600;color:var(--maroon);animation:float2 5s ease-in-out infinite}
+@keyframes float2{50%{transform:translateY(-8px)}}
+.chip:nth-of-type(1){top:-14px;left:6%}.chip:nth-of-type(2){top:12%;right:-2%;animation-delay:.8s}.chip:nth-of-type(3){bottom:14%;left:-3%;animation-delay:1.4s}.chip:nth-of-type(4){bottom:-14px;right:10%;animation-delay:.4s}.chip:nth-of-type(5){top:40%;left:-4%;display:none}.chip:nth-of-type(6){top:-14px;right:30%}
+@media(max-width:700px){.chip{position:static;display:inline-block;margin:4px;animation:none}.about{padding:28px 20px}}
+/* skills */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{padding:28px;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(122,15,36,.14)}
+.card h3{font-size:1.15rem;margin-bottom:14px;color:var(--maroon)}
+.card ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0}
+.card li{padding:5px 13px;border-radius:999px;background:#fff;border:1px solid var(--border);font-size:.88rem}
+/* how */
+.how{position:relative}
+.how svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:none}
+@media(min-width:900px){.how svg{display:block}.how .grid{grid-template-columns:repeat(3,1fr);gap:40px}.how .card:nth-child(1){transform:rotate(-2deg)}.how .card:nth-child(2){transform:translateY(40px) rotate(1.5deg)}.how .card:nth-child(3){transform:rotate(-1deg)}.how .card:hover{transform:translateY(-6px)}}
+.how .card{position:relative;z-index:1}
+.num{font-family:var(--serif);font-style:italic;font-size:3rem;color:var(--maroon);line-height:1}
+.how h3{color:var(--text);font-size:1.4rem;margin:10px 0 6px}
+.how p{color:var(--muted)}
+/* works */
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.work{position:relative;padding:14px;display:flex;flex-direction:column;min-height:340px;transition:.3s}
+.work:first-child{grid-column:1/-1}
+.work:hover{transform:translateY(-6px)}
+.work .ph{flex:1;aspect-ratio:auto;min-height:200px;background:linear-gradient(135deg,var(--blush),#fff 70%);color:var(--maroon);border-radius:20px}
+.work .row{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;padding:16px 8px 6px}
+.work h3{font-size:1.05rem;max-width:30ch}
+.work .d{font-size:.85rem;color:var(--muted);padding:0 8px}
+.work .btn{position:absolute;top:30px;left:30px;opacity:0;transform:translateY(8px)}
+.work:hover .btn,.work:focus-within .btn{opacity:1;transform:none}
+@media(hover:none){.work .btn{opacity:1;transform:none}}
+/* details */
+.dg{display:grid;gap:32px;grid-template-columns:1fr}
+@media(min-width:900px){.dg{grid-template-columns:1fr 1fr}}
+.dg h3{margin-bottom:12px;color:var(--maroon)}
+.check{list-style:none;padding:0;display:grid;gap:10px}
+.check li{display:flex;gap:10px;align-items:flex-start}
+.check svg{flex:none;width:20px;height:20px;margin-top:3px;color:var(--maroon)}
+.gal{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));margin:36px 0}
+.shot{padding:10px;cursor:zoom-in;text-align:center;font:inherit;color:inherit}
+.shot .ph{background:repeating-linear-gradient(45deg,var(--blush) 0 10px,#fff 10px 20px);color:var(--maroon)}
+.shot img{border-radius:14px;aspect-ratio:16/9;object-fit:cover;width:100%}
+.shot b{display:block;margin-top:8px;font-size:.9rem}
+dialog{border:0;background:transparent;max-width:min(94vw,1100px);width:100%;padding:0}
+dialog::backdrop{background:rgba(20,10,12,.8)}
+dialog .box{background:#fff;border-radius:24px;padding:14px;text-align:center}
+dialog .box .ph{color:var(--maroon);background:var(--blush);min-height:240px}
+dialog img{border-radius:14px;width:100%}
+/* timeline */
+.tl{max-width:760px;margin:0 auto;border-left:2px solid var(--border);padding-left:32px;position:relative}
+.tl::before{content:"";position:absolute;left:-9px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--maroon);box-shadow:0 0 0 6px var(--blush)}
+.tl h3{font-size:1.3rem}.tl .meta{color:var(--maroon);font-weight:600;margin:2px 0 14px}
+.tl ul{padding-left:20px;display:grid;gap:4px;color:var(--muted)}
+/* contact */
+.cg{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:900px){.cg{grid-template-columns:1fr 1.2fr}}
+.info p{margin-bottom:10px}.info b{color:var(--maroon)}
+form{padding:28px;display:grid;gap:14px}
+label{font-weight:600;font-size:.9rem;display:grid;gap:6px}
+input,textarea{font:inherit;padding:12px 16px;border-radius:16px;border:1px solid var(--border);background:#fff;color:var(--text)}
+.err{color:var(--maroon-light);font-size:.8rem;min-height:1em;font-weight:500}
+#ok{display:none;padding:12px 16px;border-radius:16px;background:var(--blush);color:var(--maroon-dark);font-weight:600}
+.close{text-align:center;padding:110px 0 100px;overflow:hidden}
+.close .glow{width:min(700px,100vw);height:420px;left:50%;top:50%;transform:translate(-50%,-50%)}
+.close .in{position:relative;z-index:1}
+.close h2{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.8rem,9vw,6.5rem);margin:0 0 28px;letter-spacing:-.02em}
+footer{border-top:1px solid var(--border);padding:32px 0;font-size:.9rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer a{text-decoration:none}footer a:hover{color:var(--maroon)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+ <a class="mark" href="#hero">Aravind S</a>
+ <button class="menu-btn" id="mb" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+</header>
+<nav id="menu" aria-label="Sections">
+ <a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+
+<main>
+<section id="hero">
+ <div class="glow" aria-hidden="true"></div>
+ <div class="wrap hero-in">
+  <span class="badge"><i class="dot"></i>Open to new opportunities</span>
+  <h1>Hi, I'm Aravind <span class="it"><small>Software Engineer |</small>Data Analyst</span></h1>
+  <!-- TIP: a transparent-background PNG will look best. A light-gray studio background is blended away with multiply + an edge mask. -->
+  <div class="portrait"><img src="MY_PHOTO.png" alt="Portrait of Aravind S" fetchpriority="high"></div>
+  <div class="hero-row">
+   <p class="note">B.E. Computer Science &amp; Engineering · Coimbatore, India</p>
+   <div class="btns">
+    <a class="btn p" href="#projects">View Projects <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a class="btn" href="resume.pdf" download>Download Resume</a>
+    <a class="btn" href="#contact">Contact Me</a>
+   </div>
+   <p>Building intelligent applications and transforming data into meaningful insights.</p>
+  </div>
+ </div>
+</section>
+
+<div class="marq" aria-label="Tools and technologies"><div class="track" id="track"></div></div>
+
+<section id="projects">
+ <div class="wrap rv">
+  <div class="feat">
+   <div class="glow" aria-hidden="true"></div>
+   <div class="sticker">Featured · Power BI</div>
+   <div class="feat-g">
+    <div>
+     <h3>Hospital Data Analysis <span class="it">and Report</span></h3>
+     <p>Developed an interactive hospital data analytics and reporting solution using Power BI to analyze hospital operations, patient information, financial performance, and key healthcare metrics.</p>
+     <div class="tags"><span>Power BI</span><span>Excel</span><span>Data Analytics</span><span>Data Visualization</span><span>DAX</span></div>
+     <div class="btns" style="justify-content:flex-start"><a class="btn w" href="#hospital">View Project</a><a class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.5)" href="#contact">Contact Me</a></div>
+    </div>
+    <div class="collage">
+     <!-- SWAP: replace each .ph div with <img src="your-screenshot.png" class="ph" alt="..." loading="lazy"> -->
+     <div class="fr"><div class="ph">Placeholder: Hospital Dashboard</div></div>
+     <div class="fr"><div class="ph">Placeholder: Patient Analysis</div></div>
+     <div class="fr"><div class="ph">Placeholder: Financial Analysis</div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap rv">
+  <p class="label">/ About</p><h2>A bit about me</h2>
+  <div class="about glass">
+   <span class="chip glass">Data Analytics</span><span class="chip glass">Power BI</span><span class="chip glass">Full-Stack Development</span><span class="chip glass">Python</span><span class="chip glass">SQL</span><span class="chip glass">REST APIs</span>
+   <p>I'm a B.E. Computer Science and Engineering graduate with full-stack development experience in Python, SQL, Power BI, Excel, Pandas, NumPy, React.js and REST APIs, plus strong problem-solving skills.</p>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="wrap rv">
+  <p class="label">/ Skills</p><h2>What I work with</h2>
+  <div class="grid g3">
+   <div class="card glass"><h3>Programming</h3><ul><li>Python</li><li>JavaScript</li><li>SQL</li></ul></div>
+   <div class="card glass"><h3>Data Analytics</h3><ul><li>Power BI</li><li>Excel</li><li>Pandas</li><li>NumPy</li></ul></div>
+   <div class="card glass"><h3>Database</h3><ul><li>Oracle</li></ul></div>
+   <div class="card glass"><h3>Web Development</h3><ul><li>HTML</li><li>CSS</li><li>React.js</li></ul></div>
+   <div class="card glass"><h3>Other</h3><ul><li>REST APIs</li><li>CRUD Operations</li><li>Data Visualization</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section id="how">
+ <div class="wrap rv">
+  <p class="label">/ How I Work</p><h2>Three simple steps</h2>
+  <div class="how">
+   <svg viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><path d="M300 130 C 360 60, 400 220, 470 190" fill="none" stroke="#7A0F24" stroke-width="1.5" stroke-dasharray="5 6"/><path d="M640 190 C 690 230, 700 90, 770 130" fill="none" stroke="#7A0F24" stroke-width="1.5" stroke-dasharray="5 6"/></svg>
+   <div class="grid">
+    <div class="card glass"><div class="num">01</div><h3>Understand</h3><p>Clarify the problem, requirements, and data.</p></div>
+    <div class="card glass"><div class="num">02</div><h3>Build</h3><p>Develop clean code, queries, and dashboards.</p></div>
+    <div class="card glass"><div class="num">03</div><h3>Deliver</h3><p>Test, refine, and present clear, usable results.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="works">
+ <div class="wrap rv">
+  <p class="label">/ Selected Works</p><h2>Projects I've built</h2>
+  <div class="grid g2">
+   <article class="work glass">
+    <!-- SWAP: replace the .ph div with an <img> screenshot in each card -->
+    <div class="ph">Placeholder: project screenshot</div>
+    <a class="btn p" href="#hospital">View Project</a>
+    <div class="row"><h3>Hospital Data Analysis and Report</h3><div><span class="pill">Power BI</span> <span class="pill">Data Analytics</span></div></div>
+   </article>
+   <article class="work glass">
+    <div class="ph">Placeholder: project screenshot</div>
+    <a class="btn p" href="#contact">View Project</a>
+    <p class="d" style="margin-top:12px">Personalized learning paths, progress tracking, KPI monitoring, skill-gap analysis, and adaptive assessments.</p>
+    <div class="row"><h3>AI-Based Personalized Learning Path &amp; Adaptive Assessment System</h3><div><span class="pill">React.js</span> <span class="pill">Python</span> <span class="pill">SQL</span></div></div>
+   </article>
+   <article class="work glass">
+    <div class="ph">Placeholder: project screenshot</div>
+    <a class="btn p" href="#contact">View Project</a>
+    <p class="d" style="margin-top:12px">Multi-level approval workflow, PDF generation, QR codes, SQL database integration, automated status tracking.</p>
+    <div class="row"><h3>OD Form Generator – Automated Institutional Workflow System</h3><div><span class="pill">Python</span> <span class="pill">SQL</span> <span class="pill">PDF Libraries</span></div></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="hospital">
+ <div class="wrap rv">
+  <p class="label">/ Project Details</p><h2>Hospital Data Analysis and Report</h2>
+  <div class="dg">
+   <div>
+    <h3>Overview</h3>
+    <p style="color:var(--muted);margin-bottom:18px">An interactive hospital analytics and reporting solution built in Power BI, covering hospital operations, patient information, financial performance, and key healthcare metrics.</p>
+    <h3>Tools</h3>
+    <div class="tags"><span class="pill">Power BI</span><span class="pill">Excel</span><span class="pill">Data Analytics</span><span class="pill">Data Visualization</span><span class="pill">DAX</span></div>
+   </div>
+   <div>
+    <h3>Key features</h3>
+    <ul class="check" id="feats"></ul>
+   </div>
+  </div>
+  <div class="gal" id="gal">
+   <!-- SWAP: replace each <div class="ph"> with <img src="screenshot.png" alt="..." loading="lazy"> (keep 16:9) -->
+   <button class="shot glass" data-t="Hospital Dashboard"><div class="ph">Placeholder</div><b>Hospital Dashboard</b></button>
+   <button class="shot glass" data-t="Patient Analysis Dashboard"><div class="ph">Placeholder</div><b>Patient Analysis Dashboard</b></button>
+   <button class="shot glass" data-t="Financial Analysis Dashboard"><div class="ph">Placeholder</div><b>Financial Analysis Dashboard</b></button>
+  </div>
+  <div class="card glass"><h3>What this project demonstrates</h3><ul><li>Data cleaning</li><li>DAX measures</li><li>KPI design</li><li>Dashboard storytelling</li><li>Decision-support reporting</li></ul></div>
+ </div>
+</section>
+<dialog id="lb" aria-label="Screenshot preview"><div class="box"><div class="ph" id="lbph"></div><button class="btn p" style="margin-top:12px" id="lbx">Close</button></div></dialog>
+
+<section id="experience">
+ <div class="wrap rv">
+  <p class="label">/ Experience</p><h2>Where I've worked</h2>
+  <div class="tl">
+   <h3>Full-Stack Web Development Intern</h3><p class="meta">Gateway Software Solutions · 2025</p>
+   <ul><li>End-to-end SDLC</li><li>Python, JavaScript, HTML and CSS</li><li>REST API integration</li><li>Backend development</li><li>SQL and CRUD operations</li><li>Debugging and performance optimization</li><li>Collaboration with cross-functional teams</li></ul>
+  </div>
+ </div>
+</section>
+
+<section id="education">
+ <div class="wrap rv">
+  <p class="label">/ Certifications &amp; Education</p><h2>Learning and credentials</h2>
+  <div class="grid g3">
+   <div class="card glass"><h3>Certification</h3><p>UiPath Automation Developer Associate</p></div>
+   <div class="card glass"><h3>Certification</h3><p>Infosys Springboard – Data Visualization, SQL &amp; Power BI</p></div>
+   <div class="card glass"><h3>Education</h3><p>B.E. Computer Science &amp; Engineering<br>Hindusthan College of Engineering &amp; Technology, Coimbatore<br>CGPA 7.8 · 2022–2026</p></div>
+   <!-- SCHOOLS: replace each [placeholder] with your real details (school name, city, board, percentage, years). Delete a card if you don't want it. -->
+   <div class="card glass"><h3>Higher Secondary (Class XII)</h3><p>[School name], [City]<br>[Board] · [Percentage] · [Year]</p></div>
+   <div class="card glass"><h3>Secondary (Class X)</h3><p>[School name], [City]<br>[Board] · [Percentage] · [Year]</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap rv">
+  <p class="label">/ Contact</p><h2>Get in touch</h2>
+  <div class="cg">
+   <div class="info glass card">
+    <p><b>Email</b><br><a href="mailto:aravindsiva9500@gmail.com">aravindsiva9500@gmail.com</a></p>
+    <p><b>LinkedIn</b><br><a href="https://linkedin.com/in/aravind-s-02768a399" target="_blank" rel="noopener">linkedin.com/in/aravind-s-02768a399</a></p>
+    <p><b>Location</b><br>Coimbatore, Tamil Nadu, India</p>
+   </div>
+   <!-- To send without a mail client, set action="https://formspree.io/f/YOUR_ID" or call EmailJS inside the submit handler below. -->
+   <form class="glass" id="f" novalidate>
+    <label>Name<input id="n" autocomplete="name" required><span class="err" id="en"></span></label>
+    <label>Email<input id="e" type="email" autocomplete="email" required><span class="err" id="ee"></span></label>
+    <label>Message<textarea id="m" rows="4" required></textarea><span class="err" id="em"></span></label>
+    <button class="btn p" type="submit">Send message</button>
+    <div id="ok" role="status">Thanks! Your email app should open with your message ready to send.</div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<div class="close">
+ <div class="glow" aria-hidden="true"></div>
+ <div class="in"><h2>Let's work <span style="color:var(--maroon)">together</span></h2><a class="btn p" href="mailto:aravindsiva9500@gmail.com">Contact Me</a></div>
+</div>
+</main>
+
+<footer><div class="wrap">
+ <span>© <span id="yr"></span> Aravind S</span>
+ <nav aria-label="Footer"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="GITHUB_URL">GitHub (add link)</a></nav>
+ <a class="btn" href="#hero">Back to top ↑</a>
+</div></footer>
+
+<script>
+const $=s=>document.querySelector(s);
+// menu
+const mb=$('#mb'),mn=$('#menu');
+const tg=o=>{mn.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Close menu':'Open menu')};
+mb.onclick=()=>tg(!mn.classList.contains('open'));
+mn.querySelectorAll('a').forEach(a=>a.onclick=()=>tg(false));
+addEventListener('keydown',e=>{if(e.key==='Escape')tg(false)});
+// marquee (duplicated for seamless loop)
+const tools=['Python','JavaScript','SQL','Oracle','Power BI','Excel','Pandas','NumPy','React.js','HTML','CSS','REST APIs'];
+$('#track').innerHTML=[...tools,...tools].map(t=>`<span>${t}</span>`).join('');
+// feature checklist
+const ck='<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="10" cy="10" r="8.5"/><path d="M6 10.5l2.7 2.7L14 8"/></svg>';
+$('#feats').innerHTML=['Patient Analysis dashboard','Financial Analysis dashboard','Hospital KPI monitoring','Interactive charts and visualizations','Patient-related insights','Financial performance reporting','Filters and interactive dashboard navigation','Data-driven reporting for decision-making'].map(t=>`<li>${ck}<span>${t}</span></li>`).join('');
+// lightbox (when you swap in <img>, it is cloned into the dialog)
+const lb=$('#lb');
+document.querySelectorAll('.shot').forEach(b=>b.onclick=()=>{const im=b.querySelector('img');$('#lbph').innerHTML=im?`<img src="${im.src}" alt="${b.dataset.t}">`:'Placeholder: '+b.dataset.t;lb.showModal()});
+$('#lbx').onclick=()=>lb.close();lb.onclick=e=>{if(e.target===lb)lb.close()};
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// form
+$('#f').onsubmit=ev=>{
+ ev.preventDefault();
+ const n=$('#n').value.trim(),e=$('#e').value.trim(),m=$('#m').value.trim();
+ $('#en').textContent=n?'':'Enter your name.';
+ $('#ee').textContent=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)?'':'Enter a valid email address.';
+ $('#em').textContent=m.length>=10?'':'Write at least 10 characters.';
+ if(document.querySelector('.err:not(:empty)'))return;
+ // PLUG IN Formspree / EmailJS here. Fallback below opens the visitor's email app.
+ location.href=`mailto:aravindsiva9500@gmail.com?subject=${encodeURIComponent('Portfolio message from '+n)}&body=${encodeURIComponent(m+'\n\nFrom: '+n+' ('+e+')')}`;
+ $('#ok').style.display='block';ev.target.reset();
+};
+$('#yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
